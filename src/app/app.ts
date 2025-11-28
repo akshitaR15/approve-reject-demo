@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ApproveReject } from './approve-reject/approve-reject';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, ApproveReject],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

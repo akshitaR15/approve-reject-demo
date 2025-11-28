@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #e0e5ec;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  font-weight: 600;
+  color: #555;
+}
+
+tbody tr {
+  background: #e0e5ec;
+  border-radius: 12px;
+  box-shadow: 7px 7px 15px #c5c9d1, -7px -7px 15px #ffffff;
+  transition: transform 0.2s;
+}
+
+tbody tr:hover {
+  transform: translateY(-2px);
+}
+
+td.pending {
+  color: #ffa500;
+  font-weight: 600;
+}
+
+td.approved {
+  color: #00c792;
+  font-weight: 600;
+}
+
+td.rejected {
+  color: #ff4e4e;
+  font-weight: 600;
+}
+
+.actions .btn {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 3px;
+  transition: all 0.2s;
+  background: #e0e5ec;
+  box-shadow: inset 3px 3px 5px #c5c9d1, inset -3px -3px 5px #ffffff;
+}
+
+.actions .btn.approve { color: #00c792; }
+.actions .btn.reject { color: #ff4e4e; }
+
+.actions .btn:hover {
+  box-shadow: 3px 3px 7px #c5c9d1, -3px -3px 7px #ffffff;
+  transform: scale(1.05);
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #e0e5ec;
+  color: #333;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 7px 7px 15px #c5c9d1, -7px -7px 15px #ffffff;
+  font-weight: 600;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
