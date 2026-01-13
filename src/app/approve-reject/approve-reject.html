@@ -17,8 +17,8 @@
         <td>{{ req.requester }}</td>
         <td [ngClass]="req.status.toLowerCase()">{{ req.status }}</td>
         <td class="actions">
-          <button *ngIf="req.status==='Pending'" class="btn approve" (click)="approve(req)">Approve</button>
-          <button *ngIf="req.status==='Pending'" class="btn reject" (click)="reject(req)">Reject</button>
+          <button class="btn approve" (click)="approve(req)">Approve</button>
+          <button class="btn reject" (click)="reject(req)">Reject</button>
         </td>
       </tr>
     </tbody>
